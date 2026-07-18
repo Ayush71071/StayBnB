@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-figtree), ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --color-brand: #ff385c;
+  --color-brand-dark: #e31c5f;
+  --color-ink: #222222;
+  --color-muted: #717171;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--color-ink);
+  background: #ffffff;
+}
+
+/* hide scrollbars on horizontal scrollers */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Leaflet */
+.leaflet-container {
+  z-index: 0;
+  border-radius: 1rem;
+  font-family: inherit;
+}
+.leaflet-popup-content-wrapper {
+  border-radius: 0.75rem;
+}
+.staybnb-pin {
+  background: transparent;
+  border: none;
+}
+
+/* react-day-picker theming */
+.rdp-root {
+  --rdp-accent-color: #ff385c;
+  --rdp-accent-background-color: #ffe4e9;
+  --rdp-day-height: 40px;
+  --rdp-day-width: 40px;
+  --rdp-day_button-height: 38px;
+  --rdp-day_button-width: 38px;
+  font-size: 0.875rem;
+}
+
+/* subtle fade-up used on cards */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fade-up {
+  animation: fadeUp 0.5s ease both;
+}

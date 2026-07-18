@@ -1,0 +1,57 @@
+import {
+  Wifi,
+  ChefHat,
+  Car,
+  Snowflake,
+  Flame,
+  WashingMachine,
+  Waves,
+  Bath,
+  Coffee,
+  Mountain,
+  Trees,
+  Dumbbell,
+  Tv,
+  Laptop,
+  Sailboat,
+  Sun,
+  Baby,
+  Utensils,
+  Check,
+  Sparkles,
+  DoorOpen,
+  Bike,
+  Telescope,
+  Thermometer,
+} from "lucide-react";
+
+const RULES: [RegExp, React.ElementType][] = [
+  [/wifi/i, Wifi],
+  [/kitchen/i, ChefHat],
+  [/parking|transfer/i, Car],
+  [/air conditioning|ski|boot/i, Snowflake],
+  [/fire/i, Flame],
+  [/washer|dryer/i, WashingMachine],
+  [/pool|beach|lagoon|snorkel|surf|river/i, Waves],
+  [/tub|bath|sauna|hammam|shower/i, Bath],
+  [/breakfast|coffee|tea/i, Coffee],
+  [/mountain|matterhorn|fjord/i, Mountain],
+  [/jungle|garden|view/i, Trees],
+  [/gym/i, Dumbbell],
+  [/tv/i, Tv],
+  [/workspace/i, Laptop],
+  [/kayak|rowboat|dock|boat/i, Sailboat],
+  [/deck|terrace|patio|rooftop|yoga/i, Sun],
+  [/crib|baby/i, Baby],
+  [/bbq|grill|fondue/i, Utensils],
+  [/skylight|stargazing|glass/i, Sparkles],
+  [/telescope/i, Telescope],
+  [/heating/i, Thermometer],
+  [/doorman|elevator/i, DoorOpen],
+  [/bicycle|bike/i, Bike],
+];
+
+export default function AmenityIcon({ name, size = 22 }: { name: string; size?: number }) {
+  const Icon = RULES.find(([re]) => re.test(name))?.[1] ?? Check;
+  return <Icon size={size} strokeWidth={1.6} className="shrink-0 text-gray-700" />;
+}
