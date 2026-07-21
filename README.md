@@ -1,6 +1,7 @@
 # StayBnB — Full-Stack Airbnb Clone
 
 A full-stack Airbnb clone built with **Next.js 15 (App Router)**, **TypeScript**, **Tailwind CSS v4**, **Prisma + SQLite**, **Leaflet maps**, and **Stripe** (test mode, with a built-in mock payment fallback).
+
 Deployed on Vercel : stay-bn-b-opal.vercel.app
 ## Features
 
