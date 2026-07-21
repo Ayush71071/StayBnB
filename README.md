@@ -1,8 +1,9 @@
 # StayBnB — Full-Stack Airbnb Clone
 
-A full-stack Airbnb clone built with **Next.js 15 (App Router)**, **TypeScript**, **Tailwind CSS v4**, **Prisma + SQLite**, **Leaflet maps**, and **Stripe** (test mode, with a built-in mock payment fallback).
+A full-stack Airbnb clone built with **Next.js 15 (App Router)**, **TypeScript**, **Tailwind CSS v4**, **Prisma + PostgreSQL**, **Leaflet maps**, and **Stripe** (test mode, with a built-in mock payment fallback).
 
-Live Demo : stay-bn-b-opal.vercel.app
+**🔗 Live demo: [stay-bn-b-opal.vercel.app](https://stay-bn-b-opal.vercel.app)**
+
 ## Features
 
 - **Property listings** — browse, search by destination, filter by category, guest count and date availability
@@ -18,7 +19,7 @@ Live Demo : stay-bn-b-opal.vercel.app
 
 ```bash
 npm install
-npm run db:push     # create the SQLite database
+npm run db:push     # sync the Postgres schema (set DATABASE_URL in .env first)
 npm run db:seed     # load demo data
 npm run dev         # http://localhost:3000
 ```
@@ -46,7 +47,7 @@ Checkout then redirects to Stripe Checkout instead of the mock processor. Use ca
 | --------- | ------------------------------------------ |
 | Frontend  | Next.js 15, React 19, Tailwind CSS v4      |
 | Backend   | Next.js Route Handlers (REST API)          |
-| Database  | SQLite via Prisma ORM                      |
+| Database  | PostgreSQL (Neon) via Prisma ORM           |
 | Auth      | jose (JWT) + bcryptjs, httpOnly cookies    |
 | Maps      | Leaflet + react-leaflet + OpenStreetMap    |
 | Payments  | Stripe Checkout (test) / mock processor    |
